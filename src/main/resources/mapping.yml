@@ -1,0 +1,113 @@
+sourceFormat: pacs.008.001.08
+targetFormat: MEPS+
+mapping:
+  - source: Document/FIToFICstmrCdtTrf/GrpHdr/MsgId
+    target: Message/GroupHeader/MessageID
+
+  - source: Document/FIToFICstmrCdtTrf/GrpHdr/CreDtTm
+    target: Message/GroupHeader/CreationDateTime
+
+  - source: Document/FIToFICstmrCdtTrf/GrpHdr/InstgAgt/FinInstnId/BICFI
+    target: Message/GroupHeader/InitiatingParty/BIC
+
+  - source: Document/FIToFICstmrCdtTrf/GrpHdr/InstdAgt/FinInstnId/BICFI
+    target: Message/GroupHeader/ReceivingParty/BIC
+
+  - source: Document/FIToFICstmrCdtTrf/GrpHdr/SttlmInf/SttlmMtd
+    target: Message/GroupHeader/SettlementMethod
+
+  - source: Document/FIToFICstmrCdtTrf/GrpHdr/SttlmInf/ClrSys/Prtry
+    target: Message/GroupHeader/ClearingSystem
+
+  - source: Document/FIToFICstmrCdtTrf/GrpHdr/IntrBkSttlmDt
+    target: Message/GroupHeader/SettlementDate
+
+  - source: Document/FIToFICstmrCdtTrf/GrpHdr/TtlIntrBkSttlmAmt
+    target: Message/GroupHeader/TotalSettlementAmount
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtId/InstrId
+    target: Message/Transaction/InstructionID
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtId/EndToEndId
+    target: Message/Transaction/EndToEndID
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtId/TxId
+    target: Message/Transaction/TransactionID
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtTpInf/SvcLvl/Cd
+    target: Message/Transaction/ServiceLevelCode
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtTpInf/LclInstrm/Prtry
+    target: Message/Transaction/LocalInstrument
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/IntrBkSttlmAmt
+    target: Message/Transaction/SettlementAmount
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/IntrBkSttlmDt
+    target: Message/Transaction/SettlementDate
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/SttlmTmReq/CLSTm
+    target: Message/Transaction/CloseTime
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/ChrgBr
+    target: Message/Transaction/ChargeBearer
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/MndtRltdInf/MndtId
+    target: Message/Transaction/MandateID
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/Nm
+    target: Message/Transaction/Debtor/Name
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/PstlAdr/AdrLine[0]
+    target: Message/Transaction/Debtor/AddressLine1
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/PstlAdr/AdrLine[1]
+    target: Message/Transaction/Debtor/AddressLine2
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAcct/Id/IBAN
+    target: Message/Transaction/DebtorAccount/IBAN
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAcct/Id/Othr/Id
+    target: Message/Transaction/DebtorAccount/OtherID
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAgt/FinInstnId/BICFI
+    target: Message/Transaction/DebtorAgent/BIC
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/CdtrAgt/FinInstnId/BICFI
+    target: Message/Transaction/CreditorAgent/BIC
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/Nm
+    target: Message/Transaction/Creditor/Name
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/PstlAdr/AdrLine[0]
+    target: Message/Transaction/Creditor/AddressLine1
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/PstlAdr/AdrLine[1]
+    target: Message/Transaction/Creditor/AddressLine2
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/CdtrAcct/Id/IBAN
+    target: Message/Transaction/CreditorAccount/IBAN
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/CdtrAcct/Id/Othr/Id
+    target: Message/Transaction/CreditorAccount/OtherID
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/RmtInf/Ustrd
+    target: Message/Transaction/RemittanceInformation/Unstructured
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/RmtInf/Strd/CdtrRefInf/Ref
+    target: Message/Transaction/RemittanceInformation/CreditorReference
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Purp/Cd
+    target: Message/Transaction/PurposeCode
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/InstrForNxtAgt/InstrInf
+    target: Message/Transaction/InstructionForNextAgent
+
+  - source: Document/FIToFICstmrCdtTrf/SplmtryData/Envlp/Cstmr/Ref
+    target: Message/Transaction/CustomerReference
+
+  - source: Document/FIToFICstmrCdtTrf/SplmtryData/Envlp/Cstmr/CategoryPurpose
+    target: Message/Transaction/CategoryPurpose
+
+  - source: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/InstrForCdtrAgt/InstrInf
+    target: Message/Transaction/InstructionForCreditorAgent

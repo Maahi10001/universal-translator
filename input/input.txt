@@ -1,0 +1,106 @@
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>MSG123456789</MsgId>
+      <CreDtTm>2025-07-13T10:15:30</CreDtTm>
+      <InstgAgt>
+        <FinInstnId>
+          <BICFI>INDBINBBXXX</BICFI>
+        </FinInstnId>
+      </InstgAgt>
+      <InstdAgt>
+        <FinInstnId>
+          <BICFI>HDFCINBBXXX</BICFI>
+        </FinInstnId>
+      </InstdAgt>
+      <SttlmInf>
+        <SttlmMtd>CLRG</SttlmMtd>
+        <ClrSys>
+          <Prtry>MEPS</Prtry>
+        </ClrSys>
+      </SttlmInf>
+      <IntrBkSttlmDt>2025-07-13</IntrBkSttlmDt>
+      <TtlIntrBkSttlmAmt Ccy="INR">100000.00</TtlIntrBkSttlmAmt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>INSTR123</InstrId>
+        <EndToEndId>E2E123456789</EndToEndId>
+        <TxId>TXN123456</TxId>
+      </PmtId>
+      <PmtTpInf>
+        <SvcLvl>
+          <Cd>NURG</Cd>
+        </SvcLvl>
+        <LclInstrm>
+          <Prtry>IMPS</Prtry>
+        </LclInstrm>
+      </PmtTpInf>
+      <IntrBkSttlmAmt Ccy="INR">100000.00</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2025-07-13</IntrBkSttlmDt>
+      <SttlmTmReq>
+        <CLSTm>16:30:00</CLSTm>
+      </SttlmTmReq>
+      <ChrgBr>SHAR</ChrgBr>
+      <Dbtr>
+        <Nm>Ravi Kumar</Nm>
+        <PstlAdr>
+          <AdrLine>12 MG Road</AdrLine>
+          <AdrLine>Bangalore</AdrLine>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN>IN1234567890123456</IBAN>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BICFI>INDBINBBXXX</BICFI>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtrAgt>
+        <FinInstnId>
+          <BICFI>HDFCINBBXXX</BICFI>
+        </FinInstnId>
+      </CdtrAgt>
+      <Cdtr>
+        <Nm>Sneha Sharma</Nm>
+        <PstlAdr>
+          <AdrLine>45 Park Avenue</AdrLine>
+          <AdrLine>Delhi</AdrLine>
+        </PstlAdr>
+      </Cdtr>
+      <CdtrAcct>
+        <Id>
+          <IBAN>IN9876543210987654</IBAN>
+        </Id>
+      </CdtrAcct>
+      <RmtInf>
+        <Ustrd>Invoice 2025/07/001 Payment</Ustrd>
+        <Strd>
+          <CdtrRefInf>
+            <Ref>INV202507001</Ref>
+          </CdtrRefInf>
+        </Strd>
+      </RmtInf>
+      <Purp>
+        <Cd>SUPP</Cd>
+      </Purp>
+      <InstrForNxtAgt>
+        <InstrInf>URGENT</InstrInf>
+      </InstrForNxtAgt>
+      <InstrForCdtrAgt>
+        <InstrInf>Notify beneficiary</InstrInf>
+      </InstrForCdtrAgt>
+    </CdtTrfTxInf>
+    <SplmtryData>
+      <Envlp>
+        <Cstmr>
+          <Ref>CLIENTREF001</Ref>
+          <CategoryPurpose>GOVT</CategoryPurpose>
+        </Cstmr>
+      </Envlp>
+    </SplmtryData>
+  </FIToFICstmrCdtTrf>
+</Document>
